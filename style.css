@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: "Manrope";
+}
+
+main {
+  margin: 2.25rem 2.5rem;
+}
+main section {
+  display: flex;
+  background-color: rgb(235, 240, 250);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.content {
+  display: grid;
+  gap: 2.25rem;
+  justify-items: start;
+  padding: 6.375rem 4.5rem;
+}
+.content .title-and-description {
+  display: grid;
+  gap: 1.125rem;
+  justify-items: start;
+}
+.content .title-and-description h1 {
+  color: rgb(31, 66, 132);
+  font-weight: 500;
+  font-size: 1.875rem;
+  margin: 0;
+}
+.content .title-and-description p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 27.2px;
+  max-width: 31.875rem;
+  color: rgb(114, 114, 114);
+}
+.content button {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 0.75rem;
+  padding-left: 1.5rem;
+  background-color: rgb(36, 76, 152);
+  border: none;
+  border-radius: 3.75rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1.125rem;
+}
+.content button img {
+  background-color: white;
+  padding: 0.625rem;
+  border-radius: 2.5rem;
+}
+
+.conrainer-img {
+  width: 47.25vw;
+  flex-shrink: 0;
+  background-image: url("img/image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 1441px) {
+  .content .title-and-description h1 {
+    font-size: 1.625rem;
+  }
+}
+@media (max-width: 1300px) {
+  .content {
+    padding: 5vw 1.5rem;
+  }
+}
+@media (max-width: 1100px) {
+  main {
+    margin: 1.5rem;
+  }
+  main section {
+    flex-direction: column;
+  }
+  .content {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .conrainer-img {
+    height: 50vw;
+    width: 100%;
+  }
+}
+@media (max-width: 769px) {
+  .content .title-and-description h1 {
+    font-size: 1.25rem;
+  }
+  .content .title-and-description p {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  .content button {
+    gap: 19px;
+    padding: 0.625rem;
+    padding-left: 1.125rem;
+    font-size: 15px;
+  }
+  .content button img {
+    padding: 0.375rem;
+  }
+}
+@media (max-width: 376px) {
+  main {
+    margin: 0.875rem 1.5rem;
+  }
+  main section {
+    flex-direction: column;
+  }
+  .content {
+    padding-bottom: 1.125rem;
+    gap: 1.125rem;
+  }
+  .content .title-and-description h1 {
+    font-size: 27px;
+  }
+  .content .title-and-description p {
+    font-size: 13px;
+    line-height: 20.8px;
+  }
+  .content button {
+    font-size: 15px;
+  }
+  .conrainer-img {
+    height: 60vw;
+  }
+}/*# sourceMappingURL=style.css.map */
