@@ -1,0 +1,142 @@
+$bg-modal: rgba(240, 244, 252, 1);
+$text-color: rgba(50, 50, 50, 1);
+$bg-input: rgba(215, 226, 246, 1);
+$placeholder-color: rgba(31, 66, 132, 1);
+$button-color: rgba(36, 76, 152, 1);
+
+.modal-container {
+    background-color: rgba(240, 244, 252, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+    &.close {
+        z-index: -1;
+        opacity: 0;
+    }
+}
+
+.modal-content {
+    box-sizing: border-box;
+    width: 31.25rem;
+    background-color: $bg-modal;
+    padding: 1.5rem;
+    display: grid;
+    gap: 0.25rem;
+
+
+    .close {
+        border-radius: 0.625rem;
+        background-color: white;
+        padding: 0.875rem;
+        height: 24px;
+        justify-self: end;
+        cursor: pointer;
+    }
+
+    .title {
+        font-weight: 500;
+        color: $text-color;
+        font-size: 1.5rem;
+        margin-bottom: 0.875rem;
+    }
+
+    button {
+        padding: 1.125rem;
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 28.8px;
+        border: none;
+        border-radius: 0.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &.sing-in {
+            background-color: $button-color;
+            color: white;
+        }
+
+        &.sing-up {
+            border: solid 1px $button-color;
+            color: $button-color;
+        }
+
+        &:active {
+            opacity: 0.95;
+        }
+    }
+}
+
+.inputs {
+    display: grid;
+    gap: 0.25rem;
+
+    input {
+        border: none;
+        outline: none;
+        border-radius: 0.625rem;
+        background-color: $bg-input;
+        padding: 1.5rem;
+        font-size: 1.125rem;
+        font-family: inherit;
+
+        &::placeholder {
+            color: $placeholder-color;
+            font-weight: 500;
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.remember-password {
+    margin: 1.25rem 0;
+    font-size: 1.125rem;
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: inline-flex;
+        gap: 0.875rem;
+        align-items: center;
+        cursor: pointer;
+
+        .img-choice {
+            border: solid 2px $text-color;
+            border-radius: 3px;
+            box-sizing: border-box;
+            height: 1.125rem;
+            width: 1.125rem;
+            transition: all 0.2s ease-in-out;
+        }
+    }
+
+    input:checked + label .img-choice {
+        background-color: $placeholder-color;
+        border-color: $placeholder-color;
+    }
+}
+
+.recover {
+    color: $button-color;
+    font-weight: 500;
+    font-size: 1.25rem;
+    cursor: pointer;
+    justify-self: start;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: auto;
+    }
+}

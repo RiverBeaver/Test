@@ -18,7 +18,7 @@
                     <h1>Демо-версия</h1>
                     <p>За 18 лет деятельности было реализовано более 500 крупных, а так же, не менее 2500 средних и малых проектов. Используя знания и накопленный опыт мы можем предложить </p>
                 </div>
-                <button>Попробовать бесплатно
+                <button class="try">Попробовать бесплатно
                     <img src="img/arrow-up-right.svg" alt="">
                 </button>
             </div>
@@ -26,5 +26,28 @@
             </div>
         </section>   
     </main>
+    <div class="modal-container close">
+        <div class="modal-content">
+            <div class="close"> 
+                <img src="img/x.png" alt="">
+            </div>
+            <div class="title">Войти в систему</div>
+            <div class="inputs">
+                <input type="text" placeholder="Email/Телефон">
+                <input type="password" placeholder="Пароль">
+            </div>
+            <div class="remember-password">
+                <input type="checkbox" id="remember"> 
+                <label for="remember">
+                    <div class="img-choice"></div>
+                    Запомнить пароль
+                </label>
+            </div>
+            <div class="recover">Восстановить</div>
+            <button class="sing-in">Войти</button>
+            <button class="sing-up">Зарегестрироваться</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

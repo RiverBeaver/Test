@@ -1,6 +1,17 @@
+@import 'assets/modal';
+
 $bg-color: rgba(235, 240, 250, 1);
 $title-color: rgba(31, 66, 132, 1);
 $button-color: rgba(36, 76, 152, 1);
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $bg-color;
+    border-radius: 0.25rem;
+}
 
 body {
     margin: 0;
@@ -46,7 +57,7 @@ main {
         }
     }
 
-    button {
+    .try {
         display: flex;
         align-items: center;
         gap: 3rem;
